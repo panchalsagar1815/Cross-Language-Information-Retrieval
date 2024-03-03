@@ -8,7 +8,7 @@ We're going to use machine translation, and information retrieval using a vector
 Parts of the project are explained as we progress.
 
 Data Used
-bitext.(en,de): A sentence aligned, parallel German-English corpus, sourced from the Europarl corpus (which is a collection of debates held in the EU parliament over a number of years). We'll use this to develop word-alignment tools, and build a translation probability table.
+bitext. (en, de): A sentence aligned, parallel German-English corpus, sourced from the Europarl corpus (which is a collection of debates held in the EU parliament over a number of years). We'll use this to develop word-alignment tools, and build a translation probability table.
 
 newstest.(en,de): A separate, smaller parallel corpus for evaulation of the translation system.
 
