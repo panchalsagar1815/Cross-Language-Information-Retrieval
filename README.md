@@ -1,7 +1,7 @@
 # Cross-Language-Information-Retrieval
 
 Overview
-The aim of this project is to build a cross language information retrieval system (CLIR) which, given a query in German, will be capable of searching text documents written in English and displaying the results in German.
+This project aims to build a cross language information retrieval system (CLIR) which, given a query in German, will be capable of searching text documents written in English and displaying the results in German.
 
 We're going to use machine translation, information retrieval using a vector space model, and then assess the performance of the system using IR evaluation techniques.
 
