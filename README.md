@@ -1,1 +1,1 @@
-# -Cross-Language-Information-Retrieval
+# Cross-Language-Information-Retrieval
