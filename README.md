@@ -37,4 +37,8 @@ Calculating the TF/IDF representation for all documents in our Wikipedia corpus.
 Storing an inverted index to efficiently document, given a query term.
 Implementing querying with BM25.
 Test runs.
+
 So for our first task, we'll load the devel. docs file, extract and tokenize the terms, and store them in a Python dictionary with the document IDs as keys.
+We took the default values for k1 and b (1.5 and 0.5), which seemed to give good results. Although these parameters may be altered depending on the type of data being dealt with.
+
+Now we create a method to retrieve the query component and another method that will use the previous ones and retrieve the relevant documents for a query, sorted based on their ranks.
