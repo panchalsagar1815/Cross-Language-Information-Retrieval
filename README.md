@@ -65,3 +65,24 @@ The models will be trained on the 'bitext. en' file, and tested on 'newest. en'.
 As we train the model on different files, it's obvious that we'll run into words (unigrams) and trigrams that we hadn't seen in the file we trained the model on. To account for this unknown information, we'll use add-k or Laplace smoothing for the unigram and Katz-Backoff smoothing for the trigram model.
 
 Let's start with calculating the unigram, bigram and trigram counts (we need the bigram counts for trigram smoothing). The sentences are also converted appropriately by adding sentences at the start and end of sentences.
+
+For the unigram language model, the perplexity for different values of k was as follow:
+
+k	Perplexity
+0.0001	613.92
+0.01	614.03
+0.1	628.82
+1	823.302
+For the tri-gram model, Katz-Backoff smoothing was chosen as it takes a discounted probability for things only seen once, and backs off to a lower level n-gram for unencountered n-grams.
+
+Compared with the trigram model, the perplexity was as follows:
+
+Model	Perplexity
+Unigram (Best K)	613.92
+Trigram (Katz Backoff)	461.65
+As can be seen, the trigram model with 'Katz Backoff' smoothing seems to perform better than the best unigram model (with k = 0.0001). Thus we can say that this model is better for predicting the sequence of a sentence than unigram, which should is obvious if you think about it.
+
+Translation model
+Next, we'll estimate translation model probabilities. For this, we'll use IBM1 from the NLTK library. IBM1 learns word based translation probabilities using expectation maximisation.
+
+We'll use both 'bitext.de' and 'bitext.en' files for this purpose; extract the sentences from each, and then use IBM1 to build the translation tables.
