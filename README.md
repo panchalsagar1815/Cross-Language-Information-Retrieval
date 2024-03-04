@@ -12,7 +12,7 @@ bitext. (en, de): A sentence-aligned, parallel German-English corpus, sourced fr
 
 newest. (en, de): A separate, smaller parallel corpus for evaluation of the translation system.
 
-devel.(docs,queries,qrel): A set of documents in English (sourced from Wikipedia), queries in German, and relevance judgement scores for each query-document pair.
+devel. (docs,queries,qrel): A set of documents in English (sourced from Wikipedia), queries in German, and relevance judgement scores for each query-document pair.
 
 The files are available to check out in the data/clir directory of the repo.
 
