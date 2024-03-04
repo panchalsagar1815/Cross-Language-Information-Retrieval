@@ -34,7 +34,7 @@ Here's an overview of the tasks involved:
 Loading the data files, and tokenizing the input.
 Preprocessing the lexicon by stemming, and removing stopwords.
 Calculating the TF/IDF representation for all documents in our Wikipedia corpus.
-Storing an inverted index to efficiently documents, given a query term.
+Storing an inverted index to efficiently document, given a query term.
 Implementing querying with BM25.
 Test runs.
-So for our first task, we'll load the devel.docs file, extract and tokenize the terms, and store them in a python dictionary with the document ids as keys.
+So for our first task, we'll load the devel. docs file, extract and tokenize the terms, and store them in a Python dictionary with the document IDs as keys.
