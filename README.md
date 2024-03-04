@@ -42,3 +42,29 @@ So for our first task, we'll load the devel. docs file, extract and tokenize the
 We took the default values for k1 and b (1.5 and 0.5), which seemed to give good results. Although these parameters may be altered depending on the type of data being dealt with.
 
 Now we create a method to retrieve the query component and another method that will use the previous ones and retrieve the relevant documents for a query, sorted based on their ranks.
+
+The information retrieval engine has worked quite well in this case. The top ranked document for the query is a snippet of the wikipedia article for Manchester United Football Club.
+
+On further inspection, we can see that the documents ranked lower are, for example, for The University of Manchester, or even just articles with the words 'Manchester' or 'United' in them.
+
+Now we can begin translating the German queries to English.
+
+Query Translation:
+For translation, we'll implement a simple word-based translation model in a noisy channel setting. This means that we'll use both a language model over English, and a translation model.
+
+We'll use a unigram language model for decoding/translation, but also create a model with trigram to test the improvement in performace).
+
+Our aim is to find the string, 
+ which maximises 
+, given English output string 
+ and German input string 
+.
+
+Language Model:
+From Wikipedia: A statistical language model is a probability distribution over sequences of words. Given such a sequence, say of length m, it assigns a probability P(w1,....,wm) to the whole sequence.
+
+The models will be trained on the 'bitext.en' file, and tested on 'newstest.en'.
+
+As we'll train the model on different files, it's obvious that we'll run into words (unigrams) and trigrams what we hadn't seen in the file we trained the model on. To account for these unknown information, we'll use add-k or laplace smoothing for the unigram and Katz-Backoff smoothing for the trigram model.
+
+Let's start with calculating the unigram, bigram and trigram counts (we need the bigram counts for trigram smoothing). The sentences are also converted appropriately by adding sentinels at the start and end of sentences.
