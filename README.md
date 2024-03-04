@@ -23,7 +23,7 @@ As mentioned earlier, we're going to build a CLIR engine consisting of informati
 
 The CLIR system will:
 
-translate queries from German into English (because our searcheable corpus is in English), using word-based translation, a rather simplistic approach as opposed to the sophistication you might see in, say, Google Translate.
+translate queries from German into English (because our searchable corpus is in English), using word-based translation, a rather simplistic approach as opposed to the sophistication you might see in, say, Google Translate.
 search over the document corpus using the Okapi BM25 IR ranking model, a variation of the traditional TF-IDF model.
 evaluate the quality of ranked retrieval results using the query relevance judgements.
 Information Retrieval using Okapi BM25
@@ -32,8 +32,8 @@ We'll start by building an IR system, and give it a test run with some English q
 Here's an overview of the tasks involved:
 
 Loading the data files, and tokenizing the input.
-Preprocessing the lexicon by stemming, removing stopwords.
-Calculating the TF/IDF representation for all documents in our wikipedia corpus.
+Preprocessing the lexicon by stemming, and removing stopwords.
+Calculating the TF/IDF representation for all documents in our Wikipedia corpus.
 Storing an inverted index to efficiently documents, given a query term.
 Implementing querying with BM25.
 Test runs.
