@@ -86,3 +86,16 @@ Translation model
 Next, we'll estimate translation model probabilities. For this, we'll use IBM1 from the NLTK library. IBM1 learns word based translation probabilities using expectation maximisation.
 
 We'll use both 'bitext.de' and 'bitext.en' files for this purpose; extract the sentences from each, and then use IBM1 to build the translation tables.
+
+Translations obtained through Google Translate are obviously better. It's interesting to note that our own translation engine works well if a 'word-word' translation is considered, and if the word-pair has been encountered enough times in the bi-lingual corpora.
+
+Google Translate also seems to perform better as it's considering phrase based translation, which is more sophisticated and accurate than word-word translation.
+
+Our engine also seems to work better for function words rather than content words as those would have been the one encountered a lot in the bi-corpora and are better aligned.
+
+The alignments were combined by taking the intersection of the forward and reverse alignments in this case. Combining the two alignments improved things in the sense that the intersection got rid of all the extra 'noise' in the alignments, so that the most likely ones remained (that existed both in the forward and reverse direction).
+
+Combining, and Evaluation
+For the final bit, we'll create a function that translates a query, and retrieves the relevant documents for it.
+
+Then, to evaluate the results of our CLIR engine, we'll use the Mean Average Precision to judge the performance of the CLIR system. MAP is a standard evaluation metric used in IR.
