@@ -18,3 +18,23 @@ The files are available to check out in the data/clir directory of the repo.
 
 Housekeeping: File encodings and tokenisation
 Since the data files we use is utf-8 encoded text, we need to convert the strings into ASCII by escaping the special symbols.
+
+As mentioned earlier, we're going to build a CLIR engine consisting of information retrieval and translation components, and then evaluate its accuracy.
+
+The CLIR system will:
+
+translate queries from German into English (because our searcheable corpus is in English), using word-based translation, a rather simplistic approach as opposed to the sophistication you might see in, say, Google Translate.
+search over the document corpus using the Okapi BM25 IR ranking model, a variation of the traditional TF-IDF model.
+evaluate the quality of ranked retrieval results using the query relevance judgements.
+Information Retrieval using Okapi BM25
+We'll start by building an IR system, and give it a test run with some English queries.
+
+Here's an overview of the tasks involved:
+
+Loading the data files, and tokenizing the input.
+Preprocessing the lexicon by stemming, removing stopwords.
+Calculating the TF/IDF representation for all documents in our wikipedia corpus.
+Storing an inverted index to efficiently documents, given a query term.
+Implementing querying with BM25.
+Test runs.
+So for our first task, we'll load the devel.docs file, extract and tokenize the terms, and store them in a python dictionary with the document ids as keys.
