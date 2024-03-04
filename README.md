@@ -99,3 +99,5 @@ Combining, and Evaluation
 For the final bit, we'll create a function that translates a query, and retrieves the relevant documents for it.
 
 Then, to evaluate the results of our CLIR engine, we'll use the Mean Average Precision to judge the performance of the CLIR system. MAP is a standard evaluation metric used in IR.
+
+With that, our basic CLIR system is complete. Improvements could be made, expecially in the translation component by using a phrase based model. Or we could use Google to translate the queries for us, and see how well the IR system performs. But that's another area of exploration.
