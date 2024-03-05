@@ -89,7 +89,7 @@ We'll use both 'bitext.de' and 'bitext.en' files for this purpose; extract the s
 
 Translations obtained through Google Translate are obviously better. It's interesting to note that our own translation engine works well if a 'word-word' translation is considered, and if the word-pair has been encountered enough times in the bi-lingual corpora.
 
-Google Translate also seems to perform better as it's considering phrase based translation, which is more sophisticated and accurate than word-word translation.
+Google Translate also seems to perform better as it's considering phrase-based translation, which is more sophisticated and accurate than word-word translation.
 
 Our engine also seems to work better for function words rather than content words as those would have been the one encountered a lot in the bi-corpora and are better aligned.
 
