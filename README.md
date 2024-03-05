@@ -66,7 +66,7 @@ As we train the model on different files, it's obvious that we'll run into words
 
 Let's start with calculating the unigram, bigram and trigram counts (we need the bigram counts for trigram smoothing). The sentences are also converted appropriately by adding sentences at the start and end of sentences.
 
-For the unigram language model, the perplexity for different values of k was as follow:
+For the unigram language model, the perplexity for different values of k was as follows:
 
 k	Perplexity
 0.0001	613.92
@@ -80,7 +80,7 @@ Compared with the trigram model, the perplexity was as follows:
 Model	Perplexity
 Unigram (Best K)	613.92
 Trigram (Katz Backoff)	461.65
-As can be seen, the trigram model with 'Katz Backoff' smoothing seems to perform better than the best unigram model (with k = 0.0001). Thus we can say that this model is better for predicting the sequence of a sentence than unigram, which should is obvious if you think about it.
+As can be seen, the trigram model with 'Katz Backoff' smoothing seems to perform better than the best unigram model (with k = 0.0001). Thus we can say that this model is better for predicting the sequence of a sentence than unigram, which should be obvious if you think about it.
 
 Translation model
 Next, we'll estimate translation model probabilities. For this, we'll use IBM1 from the NLTK library. IBM1 learns word-based translation probabilities using expectation maximisation.
