@@ -87,7 +87,7 @@ Next, we'll estimate translation model probabilities. For this, we'll use IBM1 f
 
 We'll use both 'bitext.de' and 'bitext.en' files for this purpose; extract the sentences from each, and then use IBM1 to build the translation tables.
 
-Translations obtained through Google Translate are obviously better. It's interesting to note that our own translation engine works well if a 'word-word' translation is considered, and if the word-pair has been encountered enough times in the bi-lingual corpora.
+Translations obtained through Google Translate are better. It's interesting to note that our translation engine works well if a 'word-word' translation is considered, and if the word-pair has been encountered enough times in the bi-lingual corpora.
 
 Google Translate also seems to perform better as it considers phrase-based translation, which is more sophisticated and accurate than word-word translation.
 
