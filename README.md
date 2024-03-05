@@ -83,7 +83,7 @@ Trigram (Katz Backoff)	461.65
 As can be seen, the trigram model with 'Katz Backoff' smoothing seems to perform better than the best unigram model (with k = 0.0001). Thus we can say that this model is better for predicting the sequence of a sentence than unigram, which should is obvious if you think about it.
 
 Translation model
-Next, we'll estimate translation model probabilities. For this, we'll use IBM1 from the NLTK library. IBM1 learns word based translation probabilities using expectation maximisation.
+Next, we'll estimate translation model probabilities. For this, we'll use IBM1 from the NLTK library. IBM1 learns word-based translation probabilities using expectation maximisation.
 
 We'll use both 'bitext.de' and 'bitext. en' files for this purpose; extract the sentences from each, and then use IBM1 to build the translation tables.
 
