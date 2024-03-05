@@ -91,7 +91,7 @@ Translations obtained through Google Translate are obviously better. It's intere
 
 Google Translate also seems to perform better as it considering phrase-based translation, which is more sophisticated and accurate than word-word translation.
 
-Our engine also seems to work better for function words rather than content words as those would have been the one encountered a lot in the bi-corpora and are better aligned.
+Our engine also seems to work better for function words rather than content words as those would have been the ones encountered a lot in the bi-corpora and are better aligned.
 
 The alignments were combined by taking the intersection of the forward and reverse alignments in this case. Combining the two alignments improved things in the sense that the intersection got rid of all the extra 'noise' in the alignments so that the most likely ones remained (that existed both in the forward and reverse direction).
 
